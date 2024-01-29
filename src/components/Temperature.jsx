@@ -3,6 +3,11 @@ import React from 'react';
 const Temperature = ({ minTemperature, maxTemperature, targetTemperature }) => {
     const percentage = ((targetTemperature - minTemperature) / (maxTemperature - minTemperature)) * 100;
 
+    const mainContainer = {
+        display: 'inline-block'
+    };
+
+
     const circleContainerStyle = {
         position: 'relative',
         width: '100px',
@@ -30,7 +35,7 @@ const Temperature = ({ minTemperature, maxTemperature, targetTemperature }) => {
     };
 
     return (
-        <div style={{ display: 'inline-block' }}>
+        <div style={mainContainer}>
             <div style={circleContainerStyle}>
                 <div style={targetLineStyle}></div>
             </div>
